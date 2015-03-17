@@ -1,0 +1,26 @@
+{
+  "name": "json-indent-beautifier",
+  "version": "0.0.0",
+  "description": "Simple and interactive JSON beatifier online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stefanocudini/json-indent-beautifier.git"
+  },
+  "keywords": [
+    "php",
+    "json",
+    "indent",
+    "beautifier",
+    "indenter"
+  ],
+  "author": "Stefano Cudini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanocudini/json-indent-beautifier/issues"
+  },
+  "homepage": "https://github.com/stefanocudini/json-indent-beautifier"
+}
