@@ -12,10 +12,7 @@
   },
   "keywords": [
     "php",
-    "json",
-    "indent",
-    "beautifier",
-    "indenter"
+    "json"
   ],
   "author": "Stefano Cudini",
   "license": "MIT",
