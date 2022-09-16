@@ -70,7 +70,7 @@ endif;
   <?php endif; ?>
 </div>
 
-	<div id="copy"><a href="https://opengeo.tech/">Labs</a> &bull; <a rel="author" href="https://opengeo.tech/stefano-cudini/">Stefano Cudini</a></div>
+	<div id="copy"><a href="https://opengeo.tech/">Opengeo.tech</a> &bull; <a rel="author" href="https://opengeo.tech/stefano-cudini/">Stefano Cudini</a></div>
 
 <script src="/labs-common.js"></script>
 </body>
