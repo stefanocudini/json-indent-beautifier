@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Json Beautifier</title>
+<style>
+	@import url('style.css');
+</style>
+<script type="text/javascript">
+    function selectText(containerid) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select();
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+        }
+    }
+</script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <h1><img src="logo.png" /> <b>{</b>JSON Indent Beautifier<b>}</b></h1>
+
+  <form id="form1" name="form1" method="post" action="">
+  <label>&nbsp;JSON ugly:<br />
+  <textarea id="rawjson" name="json" cols="100" rows="5">{"hello": {"world":"!"} }</textarea>
+  </label>
+  <br />
+  <!--label>&nbsp;URL: <input id="urljson" name="urljson" type="text" size="81" /></label><br /-->
+  <br />
+  <div id="buttons">
+    <input type="submit" name="submit" value="Indent" />
+    <input type="button" onclick="javascript:selectText('indented')" value="Copy" />
+  </div>
+  </form>
+  <pre id="indented"></pre>
+</div>
+
+	<div id="copy"><a href="https://opengeo.tech/">Opengeo.tech</a> &bull; <a rel="author" href="https://opengeo.tech/stefano-cudini/">Stefano Cudini</a></div>
+
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('#form1').on('submit', e => {
+    e.preventDefault()
+
+    $.post('indent.php', {json: $('#rawjson').val() }).done(text => {
+      $('#indented').text(text)
+    })
+  });
+});
+</script>
+<script src="/labs-common.js"></script>
+</body>
+</html>
+
