@@ -9,18 +9,19 @@ body {
 	box-shadow: 0 0 16px #9ccade;
 	border: 1px solid #9ccade;
 	margin:-1px auto;
-	width: 700px;
 	min-height: 700px;
 	padding: 0 30px 0 20px;
 	overflow: hidden;
+  margin: 0 auto;
 }
 
 h1 {
 	margin: 10px 0;
+  font-size: 24px;
 }
 
 h1 img {
-	vertical-align:middle;
+	vertical-align: middle;
 }
 
 h1 b {
@@ -45,7 +46,7 @@ input:hover {
 
 textarea,
 #urljson {
-	width:100%;
+  width: 100%
 }
 
 #buttons input {
